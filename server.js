@@ -28,7 +28,7 @@ function createTemplate(data)
     var htmlTemplate=`<html>
         <head>
             <link href="style.css" rel="stylesheet" >
-            <title>${title}</head>
+            <title>${title}</title>
         </head>
         <body>
             <h1> ${heading} </h1>
