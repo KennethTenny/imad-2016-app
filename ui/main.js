@@ -19,3 +19,5 @@ img.onclick={
         var interval= setInterval(moveRight, 50);
     }
 };
+
+console.log('Loaded again!');
