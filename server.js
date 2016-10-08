@@ -6,7 +6,8 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var articleOne=
+var articles={
+    articleOne:
 {
   title: 'Kenneth Article one',
   date: '8 Oct 2016',
@@ -14,7 +15,29 @@ var articleOne=
   content:` <p>Hello.kjsnfsfnjksfnjksfjksdjkfsdjkfcjksdf</p>
     <p>Hello.kjsnfsfnjksfnjksfjksdjkfsdjkfcjksdf</p>
     <p>Hello.kjsnfsfnjksfnjksfjksdjkfsdjkfcjksdf</p>`
+},
+articleTwo:
+{
+  title: 'Kenneth Article two',
+  date: '8 Oct 2016',
+  heading: 'Article two',
+  content:` <p>Hello.kjsnfsfnjksfnjksfjksdjkfsdjkfcjksdf</p>
+    <p>Hello.kjsnfsfnjksfnjksfjksdjkfsdjkfcjksdf</p>
+    <p>Hello.kjsnfsfnjksfnjksfjksdjkfsdjkfcjksdf</p>`
+},
+articleThree:
+{
+  title: 'Kenneth Article three',
+  date: '8 Oct 2016',
+  heading: 'Article three',
+  content:` <p>Hello.kjsnfsfnjksfnjksfjksdjkfsdjkfcjksdf</p>
+    <p>Hello.kjsnfsfnjksfnjksfjksdjkfsdjkfcjksdf</p>
+    <p>Hello.kjsnfsfnjksfnjksfjksdjkfsdjkfcjksdf</p>`
+}
+
 };
+
+
 
 
 
@@ -50,7 +73,7 @@ app.get('/ui/style.css', function (req, res) {
 });
 
 app.get('/article-one', function(req,res){
-    res.send(createTemplate(articleOne));
+    res.send(createTemplate(articles[articleOne]));
 });
 
 app.get('/article-two', function(req,res){
