@@ -8,9 +8,9 @@ app.use(morgan('combined'));
 
 var articleOne=
 {
-  title: "Kenneth Article one",
-  date: "8 Oct 2016",
-  heading: "Article one",
+  title: 'Kenneth Article one',
+  date: '8 Oct 2016',
+  heading: 'Article one',
   content:` <p>Hello.kjsnfsfnjksfnjksfjksdjkfsdjkfcjksdf</p>
     <p>Hello.kjsnfsfnjksfnjksfjksdjkfsdjkfcjksdf</p>
     <p>Hello.kjsnfsfnjksfnjksfjksdjkfsdjkfcjksdf</p>`
@@ -27,17 +27,17 @@ function createTemplate(data)
     
     var htmlTemplate=`<html>
         <head>
-            <link rel="stylesheet" type="text/css" href="style.css">
+            <link href="style.css" rel="stylesheet" >
             <title>${title}</head>
         </head>
         <body>
             <h1> ${heading} </h1>
             <h2> ${date} </h2>
-            ${content}
+            <h2>${content}</h2>
         </body>
         </html>`;
 
-return htmlTemplate;
+    return htmlTemplate;
 }
 
 
