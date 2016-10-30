@@ -63,15 +63,18 @@ var submit=document.getElementById('submit_btn');
 submit.onclick=function()
 {
 
-var ul=document.getElementById('nameList');
+
 names=['name1','name2','name3'];
 
-ul.innerHTML='';
+var list='';
 
 for(var i=0; i<names.length; i++)
 {
-    ul.innerHTML+=names[i];
+    list+="<li>" + names[i] + "</li>";
 }
+
+var ul=document.getElementById('nameList');
+ul.innerHTML=list;
 
 }
 
