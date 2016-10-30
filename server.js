@@ -68,6 +68,19 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+var names=[];
+app.get('/submit-name', function(req,res)
+{
+   var name=req.query.name;
+   
+   names.push(name);
+   res.send(JSON.stringify(names));
+});
+
+
+
+
+
 var counter=0;
 
 app.get('/counter', function (req, res) {
@@ -79,14 +92,7 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
-var names=[];
-app.get('/submit-name', function(req,res)
-{
-   var name=req.query.name;
-   
-   names.push(name);
-   res.send(JSON.stringify(names));
-});
+
 
 
 app.get('/:articleName', function(req,res){
