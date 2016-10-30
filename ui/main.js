@@ -56,5 +56,22 @@ button.onclick=function()
     
 };
 
-var 
+var name=document.getElementById('name');
+
+var submit=document.getElementById('submit_btn');
+
+submit.onclick=function()
+{
+
+var ul=document.getElementById('nameList');
+names=['name1','name2','name3'];
+
+ul.innerHTML='';
+
+for(var i=0; i<names.length; i++)
+{
+    ul.innerHTML+=names[i];
+}
+
+}
 
